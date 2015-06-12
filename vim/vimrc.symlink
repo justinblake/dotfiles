@@ -1,0 +1,52 @@
+" ============================================================================
+" Global Props
+" ============================================================================
+"""
+
+set gdefault
+syntax on
+
+" Wrap gitcommit file types at the appropriate length "
+filetype indent plugin on
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set clipboard=unnamedplus
+set number
+
+let mapleader = " "
+
+" ============================================================================
+" Movement
+" ============================================================================
+
+" Home row beginning / end of line
+noremap H ^
+noremap L $
+
+" Moving blocks of text in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" ============================================================================
+" Editing
+" ============================================================================
+
+:nnoremap U <C-r>
+
+" Select all text
+map <Space>a ggVG
+
+" Copy until the end of the line
+noremap Y y$
+
+" Indent everything
+noremap <Space>I ggvG=
+
+" Indent selection in visual mode
+vnoremap <Space>i =
+
+" Indent the current line
+noremap <Space>i v=
+
+" Change in double quotes
+vnoremap <Space>J ci"

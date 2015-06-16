@@ -27,4 +27,5 @@ zsh-users/zsh-completions
 caarlos0/jvm
 caarlos0/zsh-mkc
 caarlos0/zsh-git-sync
+caarlos0/zsh-add-upstream
 djui/alias-tips

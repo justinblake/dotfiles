@@ -5,6 +5,7 @@ export D=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
 
+local debug="false"
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -29,7 +30,11 @@ done
 # Start Antigen plugin management
 # ============================================================================
 
-source antigen/bundles
+if [[ $debug != "true" ]] then
+  source $D/antigen/bundles
+fi
+
+unset debug
 
 # ============================================================================
 # End of Antigen plugin management

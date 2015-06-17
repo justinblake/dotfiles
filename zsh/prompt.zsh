@@ -68,6 +68,10 @@ rb_prompt() {
   fi
 }
 
+py_version() {
+
+}
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }

@@ -15,7 +15,6 @@ then
 fi
 
 
-
 # all of our zsh files
 typeset -U config_files
 config_files=($D/**/*.zsh)
@@ -26,16 +25,9 @@ do
   source $file
 done
 
-
-
-
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
-
-### Antigen Setup ###
+# ============================================================================
+# Start Antigen plugin management
+# ============================================================================
 
 source $D/antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -65,12 +57,21 @@ antigen bundles <<EOBUNLDES
   vi-mode
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
-  virtualenv
   virtualenvwrapper
 
 EOBUNLDES
 
 antigen apply
+
+# ============================================================================
+# End of Antigen plugin management
+# ============================================================================
+
+# load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+do
+  source $file
+done
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit

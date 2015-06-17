@@ -1,0 +1,34 @@
+
+source $D/antigen/antigen/antigen.zsh
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNLDES
+
+  adb
+  atom
+  brew
+  bower
+  encode64
+  # fasd
+  httpie
+  history
+  git
+  git-extras
+  github
+  git-hubflow
+  npm
+  pip
+  python
+  pylint
+  zsh_reload
+  systemadmin
+  web-search
+  wd
+  vi-mode
+  zsh-users/zsh-syntax-highlighting
+  zsh-users/zsh-history-substring-search
+  virtualenvwrapper
+
+EOBUNLDES
+
+antigen apply

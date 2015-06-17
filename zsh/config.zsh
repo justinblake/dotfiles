@@ -36,30 +36,12 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
-setopt autocd
-# setopt AUTO_PUSHD
-# setopt pushdsilent # Omit printing directory stack
-# setopt pushdminus  # Invert meanings of +N and -N arguments to pushd
-
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
-setopt complete_aliases
+# setopt complete_aliases
 
 zle -N newtab
 
-# bindkey '^[^[[D' backward-word
-# bindkey '^[^[[C' forward-word
-# bindkey '^[[5D' beginning-of-line
-# bindkey '^[[5C' end-of-line
-# bindkey '^[[3~' delete-char
-# bindkey '^[^N' newtab
-# bindkey '^?' backward-delete-char
-
-
-
-# Bind CTRL+k and CTRL+j to substring search
-# bindkey '^j' history-substring-search-up
-# bindkey '^k' history-substring-search-down
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down

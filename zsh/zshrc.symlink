@@ -1,6 +1,5 @@
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
@@ -15,6 +14,8 @@ then
   source ~/.localrc
 fi
 
+
+
 # all of our zsh files
 typeset -U config_files
 config_files=($D/**/*.zsh)
@@ -25,58 +26,51 @@ do
   source $file
 done
 
-### zgen Setup ###
-source $D/zgen/zgen.zsh
 
-# check if there's no init script
-if ! zgen saved; then
-    echo "Creating a zgen save"
 
-    zgen oh-my-zsh
-
-    # plugins
-    zgen oh-my-zsh plugins/atom
-    zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/encode64
-    zgen oh-my-zsh plugins/fasd
-    zgen oh-my-zsh plugins/httpie
-    zgen oh-my-zsh plugins/history
-    zgen oh-my-zsh plugins/git-extras
-    zgen oh-my-zsh plugins/github
-    zgen oh-my-zsh plugins/git-hubflow
-    zgen oh-my-zsh plugins/npm
-    zgen oh-my-zsh plugins/pip
-    zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/pylint
-    zgen oh-my-zsh plugins/zsh_reload
-    zgen oh-my-zsh plugins/systemadmin
-    zgen oh-my-zsh plugins/web-search
-    zgen oh-my-zsh plugins/wd
-    zgen oh-my-zsh plugins/vi-mode
-    zgen oh-my-zsh plugins/command-not-found
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
-    zgen load caarlos0/jvm
-    zgen load caarlos0/zsh-mkc
-    zgen load caarlos0/zsh-git-sync
-    zgen load caarlos0/zsh-add-upstream
-    zgen load djui/alias-tips
-
-    # completions
-    # zgen load zsh-users/zsh-completions src
-
-    # theme
-    # zgen oh-my-zsh themes/arrow
-
-    # save all to init script
-    zgen save
-fi
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
+
+### Antigen Setup ###
+
+source $D/antigen/antigen.zsh
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNLDES
+
+  adb
+  atom
+  brew
+  bower
+  encode64
+  # fasd
+  httpie
+  history
+  git
+  git-extras
+  github
+  git-hubflow
+  npm
+  pip
+  python
+  pylint
+  zsh_reload
+  systemadmin
+  web-search
+  wd
+  vi-mode
+  zsh-users/zsh-syntax-highlighting
+  zsh-users/zsh-history-substring-search
+  virtualenv
+  virtualenvwrapper
+
+EOBUNLDES
+
+antigen apply
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
@@ -89,8 +83,6 @@ do
 done
 
 unset config_files
-
-
 
 
 ### ohmy functions ###

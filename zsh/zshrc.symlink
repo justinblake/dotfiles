@@ -50,6 +50,7 @@ done
 autoload -U compinit
 compinit
 
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
@@ -57,7 +58,6 @@ do
 done
 
 unset config_files
-
 
 ### ohmy functions ###
 add_corrects

@@ -1,5 +1,5 @@
 autoload colors && colors
-
+export VIRTUAL_ENV_DISABLE_PROMPT=yes
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 

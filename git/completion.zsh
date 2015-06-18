@@ -3,7 +3,9 @@
 # tosses it, at least).
 # completion='$(brew --prefix)/share/zsh/site-functions/_git'
 #
-# if test -f $completion
-# then
-#   source $completion
-# fi
+
+completion="$ZSH/plugins/git-extras/git-extras.plugin.zsh"
+if test -f $completion; then
+  echo "git-extras loaded"
+  source $completion
+fi

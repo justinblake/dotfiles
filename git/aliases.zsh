@@ -4,6 +4,8 @@ hub_path=$(which hub)
 if (( $+commands[hub] ))
 then
   alias git=$hub_path
+else
+  print 'no hub?!'
 fi
 
 

@@ -68,15 +68,35 @@ rb_prompt() {
   fi
 }
 
-py_version() {
+py_ver(){
+    python -V 2>&1 | sed -e 's/Python //'
+}
 
+py_prompt() {
+  if ! [[ -z "$(py_ver)" ]] then
+    echo "%{$fg_bold[yellow]%}$(py_ver)%{$reset_color%} using "
+  else
+    echo "py:err"
+  fi
+}
+
+ENV_PROMPT_PREFIX="env:"
+ENV_PROMPT_SUFFIX=" in"
+
+
+virtualenv_prompt_info() {
+    local name=""
+    if [ -n "$VIRTUAL_ENV" ]; then
+        name="$(basename $VIRTUAL_ENV)"
+    fi
+    echo "${fg_bold[blue]}$ENV_PROMPT_PREFIX${fg_bold[green]}$name$reset_color$ENV_PROMPT_SUFFIX"
 }
 
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(py_prompt)$(virtualenv_prompt_info) $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }

@@ -1,11 +1,11 @@
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
 
+local debug="false"
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -14,6 +14,7 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
 
 # all of our zsh files
 typeset -U config_files
@@ -25,52 +26,19 @@ do
   source $file
 done
 
-### zgen Setup ###
-source $D/zgen/zgen.zsh
+# ============================================================================
+# Start Antigen plugin management
+# ============================================================================
 
-# check if there's no init script
-if ! zgen saved; then
-    echo "Creating a zgen save"
-
-    zgen oh-my-zsh
-
-    # plugins
-    zgen oh-my-zsh plugins/atom
-    zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/encode64
-    zgen oh-my-zsh plugins/fasd
-    zgen oh-my-zsh plugins/httpie
-    zgen oh-my-zsh plugins/history
-    zgen oh-my-zsh plugins/git-extras
-    zgen oh-my-zsh plugins/github
-    zgen oh-my-zsh plugins/git-hubflow
-    zgen oh-my-zsh plugins/npm
-    zgen oh-my-zsh plugins/pip
-    zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/pylint
-    zgen oh-my-zsh plugins/zsh_reload
-    zgen oh-my-zsh plugins/systemadmin
-    zgen oh-my-zsh plugins/web-search
-    zgen oh-my-zsh plugins/wd
-    zgen oh-my-zsh plugins/vi-mode
-    zgen oh-my-zsh plugins/command-not-found
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-history-substring-search
-    zgen load caarlos0/jvm
-    zgen load caarlos0/zsh-mkc
-    zgen load caarlos0/zsh-git-sync
-    zgen load caarlos0/zsh-add-upstream
-    zgen load djui/alias-tips
-
-    # completions
-    # zgen load zsh-users/zsh-completions src
-
-    # theme
-    # zgen oh-my-zsh themes/arrow
-
-    # save all to init script
-    zgen save
+if [[ $debug != "true" ]] then
+  source $D/antigen/bundles
 fi
+
+unset debug
+
+# ============================================================================
+# End of Antigen plugin management
+# ============================================================================
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
@@ -89,8 +57,6 @@ do
 done
 
 unset config_files
-
-
 
 
 ### ohmy functions ###

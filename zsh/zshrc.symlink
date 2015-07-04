@@ -1,11 +1,11 @@
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
 
+local debug="false"
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -14,6 +14,7 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
 
 # all of our zsh files
 typeset -U config_files
@@ -25,43 +26,19 @@ do
   source $file
 done
 
-### Antigen Setup ###
+# ============================================================================
+# Start Antigen plugin management
+# ============================================================================
 
-source $D/antigen/antigen.zsh
-antigen use oh-my-zsh
+if [[ $debug != "true" ]] then
+  source $D/antigen/bundles
+fi
 
-antigen bundles <<EOBUNLDES
+unset debug
 
-  adb
-  atom
-  brew
-  bower
-  encode64
-  fasd
-  httpie
-  history
-  git
-  git-extras
-  github
-  git-hubflow
-  npm
-  pip
-  python
-  pylint
-  zsh_reload
-  systemadmin
-  web-search
-  wd
-  vi-mode
-  zsh-users/zsh-syntax-highlighting
-  zsh-users/zsh-history-substring-search
-  virtualenv
-  virtualenvwrapper
-
-EOBUNLDES
-
-antigen apply
-
+# ============================================================================
+# End of Antigen plugin management
+# ============================================================================
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
@@ -73,6 +50,7 @@ done
 autoload -U compinit
 compinit
 
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
@@ -80,9 +58,6 @@ do
 done
 
 unset config_files
-
-
-
 
 ### ohmy functions ###
 add_corrects

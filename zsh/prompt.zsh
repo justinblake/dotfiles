@@ -109,8 +109,8 @@ me() {
 export PROMPT=$'\n$(me) $(virtualenv_prompt_info) $(directory_name) $(git_dirty)$(need_push)\n→ '
 # export PROMPT=$'\n$(colors)\n> '
 set_prompt () {
-  export RPROMPT=%{${_lineup}%}$(py_prompt)%{${_linedown}%}
-  # export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+  # export RPROMPT=%{${_lineup}%}$(py_prompt)%{${_linedown}%}
+  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
 
 precmd() {

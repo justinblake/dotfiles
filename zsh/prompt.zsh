@@ -1,5 +1,5 @@
 autoload colors && colors
-
+export VIRTUAL_ENV_DISABLE_PROMPT=yes
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
@@ -43,7 +43,7 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " is %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
   fi
 }
 
@@ -68,12 +68,48 @@ rb_prompt() {
   fi
 }
 
+py_ver(){
+    python -V 2>&1 | sed -e 's/Python //'
+}
+
+py_prompt() {
+  if ! [[ -z "$(py_ver)" ]] then
+    echo "%{$fg[magenta]%}py›$(py_ver)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
+ENV_PROMPT_PREFIX="activated "
+ENV_PROMPT_SUFFIX=" in"
+# reset_color="${fg_bold[white]}"
+
+virtualenv_prompt_info() {
+    local name=""
+    if [ -n "$VIRTUAL_ENV" ]; then
+        name="${fg_bold[green]}$(basename $VIRTUAL_ENV)"
+    else
+        name="${fg_bold[red]}nothing"
+    fi
+    echo "$ENV_PROMPT_PREFIX$name$reset_color$ENV_PROMPT_SUFFIX"
+}
+_newline=$'\n'
+_lineup=$'\e[1A'
+_linedown=$'\e[1B'
+
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+me() {
+  echo "${fg_bold[yellow]}%m$reset_color"
+}
+
+export PROMPT=$'\n$(me) $(virtualenv_prompt_info) $(directory_name) $(git_dirty)$(need_push)\n→ '
+# export PROMPT=$'\n$(colors)\n> '
 set_prompt () {
+  # export RPROMPT=%{${_lineup}%}$(py_prompt)%{${_linedown}%}
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
 

@@ -6,6 +6,5 @@
 
 completion="$ZSH/plugins/git-extras/git-extras.plugin.zsh"
 if test -f $completion; then
-  echo "git-extras loaded"
   source $completion
 fi

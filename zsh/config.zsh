@@ -31,6 +31,15 @@ setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 
+
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt auto_list
+setopt auto_menu
+setopt hist_ignore_space
+setopt interactive_comments
+setopt complete_in_word
+
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history

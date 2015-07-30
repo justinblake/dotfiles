@@ -1,4 +1,4 @@
-'atom-text-editor.vim-mode.command-mode':
+'atom-text-editor.vim-mode.normal-mode':
   'U': 'core:redo'
   'cmd-1': 'tree-view:toggle-focus'
   'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
@@ -12,6 +12,9 @@
   'cmd-l': 'window:focus-pane-on-right'
   'cmd-h': 'window:focus-pane-on-left'
 
-'atom-workspace .tree-view':
+'body':
+  'cmd-n': 'application:new-file'
+
+'.tree-view':
   'cmd-n': 'tree-view:add-file'
   'esc': 'window:focus'

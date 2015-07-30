@@ -3,6 +3,7 @@
     showIndentGuide: true
     fontFamily: "Menlo"
     invisibles: {}
+    showInvisibles: true
     fontSize: 15
   core:
     ignoredNames: [
@@ -23,6 +24,7 @@
       "exception-reporting"
       "metrics"
     ]
+    projectHome: "/Users/john/git"
   "spell-check":
     grammars: [
       "text.plain"
@@ -33,3 +35,5 @@
     showOnStartup: false
   "release-notes":
     viewedVersion: "0.89.0"
+  "atom-typescript": {}
+  "autocomplete-plus": {}

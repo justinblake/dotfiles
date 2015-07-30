@@ -16,15 +16,28 @@ function insert_nocorrect {
 		# print !! >> ~/.zsh_nocorrect
 }
 
-function git_track {
-
-	for remote in $(git branch -r); do
-		command git branch --track $remote
+git_track() {
+	remote=origin
+	# for name in $names; do
+	# 	command git branch --track $name $remote/$name
+	# done
+	for name in `
+		git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/^[a-z]+\//,"",$1); print $1}'
+	`; do
+		# echo $name
+		# git checkout $name
+		# command git pull
+		# command echo "${name} ${remote}/${name}"
+		command git branch --track $name $remote/$name
 	done
 
-	for remote in $(git branch -r); do
-		command git checkout $remote
-		command git pull
-	done
+}
 
+git_track_SO() {
+	local remote=origin
+	for brname in `
+	  git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/[^\/]+\//,"ass",$1); print $1}'
+	`; do
+	  git branch --track $brname  $remote/$brname ;
+	done
 }

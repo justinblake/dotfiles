@@ -1,4 +1,5 @@
 
+alias ai='apm install'
 alias g.ulp="./node_modules/gulp/bin/gulp.js"
 alias glob="/Users/john/.virtualenvs/moki/lib/node_modules/cli/examples/glob.js"
 alias fast="grunt watch --fast"

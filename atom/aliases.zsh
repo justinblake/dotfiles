@@ -1,0 +1,2 @@
+
+alias ad='atom . --dev'

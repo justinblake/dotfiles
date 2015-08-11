@@ -1,0 +1,20 @@
+".dotfiles":
+  title: ".dotfiles"
+  paths: [
+    "/Users/john/.dotfiles"
+  ]
+word:
+  title: "word"
+  paths: [
+    "/Users/john/git/atom/packages/word"
+  ]
+"vim-mode":
+  title: "vim-mode"
+  paths: [
+    "/Users/john/git/testing/vim-mode"
+  ]
+"moki-dev":
+  title: "moki-dev"
+  paths: [
+    "/Users/john/dev/moki/manager/manager-dev/web"
+  ]

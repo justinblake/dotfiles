@@ -50,3 +50,10 @@ noremap <Space>i v=
 
 " Change in double quotes
 vnoremap <Space>J ci"
+
+nnoremap <Space>o o<Esc>
+nnoremap <Space>O O<Esc>
+noremap F B
+
+nnoremap <silent> ]<Space> :<C-u>put =repeat(nr2char(10),v:count)<Bar>execute "'[-1"<CR>
+nnoremap <silent> [<Space> :<C-u>put!=repeat(nr2char(10),v:count)<Bar>execute "']+1"<CR>

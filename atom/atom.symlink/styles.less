@@ -1,0 +1,17 @@
+
+
+atom-text-editor.vim-mode.command-mode::shadow {
+    .cursor.idle, .cursor.idle.blink-off {
+        background-color: #00ff44; // bright green
+        visibility: visible;
+        opacity: .5;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ff0000; // bright red
+
+    }
+    .cursor.idle.blink-off {
+        //visibility: hidden; // make hidden for complete blink
+        opacity: .55; // weird subtle little pulse, almost can't see it.
+    }
+}

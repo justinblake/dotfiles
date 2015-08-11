@@ -2,12 +2,17 @@
 *~
 .DS_Store
 *.swp
-.npm-debug.log
+npm-debug.log
 
 .tmp/
 .idea/
+.sass-cache/
+.bower-cache/
+.bower-registry/
+bin/
 bower_components/
-node_modules/
 build/
+coverage/
+node_modules/
 report/
 jspm_packages/

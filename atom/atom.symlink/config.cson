@@ -1,0 +1,117 @@
+"*":
+  editor:
+    showIndentGuide: false
+    fontFamily: "Menlo"
+    invisibles: {}
+    showInvisibles: false
+    fontSize: 12
+  core:
+    ignoredNames: [
+      ".bundle"
+      ".git"
+      "log"
+      "repositories"
+      "tmp"
+      "vendor"
+      "release"
+      "target"
+      "build/"
+    ]
+    hideGitIgnoredFiles: true
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+      "jsformat"
+      "language-javascript-better"
+      "atom-sort-sass"
+      "color-tabs"
+      "color-tabs-regex"
+      "terminal-status"
+      "trailing-spaces"
+    ]
+    projectHome: "/Users/john/git"
+    audioBeep: false
+    destroyEmptyPanes: false
+    themes: [
+      "one-dark-ui"
+      "monokai-plus"
+    ]
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+    ]
+  welcome:
+    showOnStartup: false
+  "release-notes":
+    viewedVersion: "0.89.0"
+  "atom-typescript":
+    preferredQuoteCharacter: "'"
+    showSemanticView: false
+  "autocomplete-plus": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  jumpy:
+    fontSize: 0.85
+    highContrast: true
+  "terminal-status": {}
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui": {}
+  "auto-update-packages": {}
+  "atom-material-ui":
+    altCmdPalette: false
+    compactTreeView: true
+    depth: true
+    panelContrast: true
+    rippleAccentColor: true
+    showTabIcons: true
+    slimScrollbar: true
+    tabSize: "Big"
+    useRoboto: true
+    themeSyle: "Lighter"
+  linter: {}
+  preview: {}
+  "webbox-color":
+    fillColorAsBackground: false
+  "atom-jshint": {}
+  "color-picker":
+    automaticReplace: true
+  "color-tabs": {}
+  docblockr: {}
+  esformatter: {}
+  jsformat: {}
+  minimap:
+    displayMinimapOnLeft: true
+  "find-and-replace":
+    focusEditorAfterSearch: true
+    openProjectFindResultsInRightPane: true
+    scrollToResultOnLiveSearch: true
+  semanticolor:
+    affectedSourceObjects: {}
+  "git-plus": {}
+  "git-go":
+    forceKillShortcut: "Escape"
+  "git-log": {}
+  "todo-show": {}
+  "color-tabs-regex":
+    breakAfterFirstMatch: true
+  "trailing-spaces":
+    enableForCursorLines: true
+  "sync-settings": {}
+  "recent-files-fuzzy-finder": {}
+  "fuzzy-finder": {}
+  "clipboard-plus":
+    maximumLinesNumber: 0
+  atomatigit: {}
+  "local-history": {}
+  "disable-keybindings": {}
+".js.source":
+  editor:
+    tabLength: 4
+".source.ts":
+  editor:
+    tabLength: 4

@@ -29,9 +29,9 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$($git symbolic-ref HEAD 2>/dev/null) || return
+  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
 # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
- echo "${ref#refs/heads/}"
+  echo "${ref#refs/heads/}"
 }
 
 unpushed () {
@@ -80,9 +80,11 @@ py_prompt() {
   fi
 }
 
-ENV_PROMPT_PREFIX="activated "
+ENV_PROMPT_PREFIX="with %{\e[1;38;5;195m%}venv "
 ENV_PROMPT_SUFFIX=" in"
 # reset_color="${fg_bold[white]}"
+
+
 
 virtualenv_prompt_info() {
     local name=""
@@ -103,7 +105,17 @@ directory_name() {
 }
 
 me() {
-  echo "${fg_bold[yellow]}%m$reset_color"
+  dir=`git rev-parse --show-toplevel 2>/dev/null`
+  if [[ -n $dir ]]; then
+    name=`basename $dir`
+    echo "%{\e[1;38;5;190m%}$name$reset_color"
+  else
+    echo "${fg_bold[yellow]}%m$reset_color"
+  fi
+}
+
+repo_name() {
+  basename `git rev-parse --show-toplevel`
 }
 
 export PROMPT=$'\n$(me) $(virtualenv_prompt_info) $(directory_name) $(git_dirty)$(need_push)\n→ '

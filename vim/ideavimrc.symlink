@@ -11,21 +11,12 @@ nnoremap <Space>vs :source ~/.ideavimrc<CR>
 " ============================================================================
 " IDE actions
 " ============================================================================
-"""
-vnoremap <D-S> j :action Move Statement Down<CR>
-vnoremap <D-S> k :action Move Statement Up<CR>
 
 nnoremap / :action Find<CR>
 nnoremap n :action FindNext<CR>
 nnoremap N :action FindPrevious<CR>
 nnoremap U :action $Redo<CR>
 nnoremap f :action AceJumpAction<CR>
-"nnoremap <Space>o :action GotoClass<CR>
-"nnoremap <Space>O :action GotoFile<CR>
-nnoremap <Space>d :action CloseContent<CR>
-nnoremap <Space>j :action RecentFiles<CR>
-nnoremap <Space>k :action FileStructurePopup<CR>
 
-" Visual mode
-vnoremap <D-S-j> :m '>+1<CR>gv=gv
-vnoremap <D-S-k> :m '<-2<CR>gv=gv
+
+

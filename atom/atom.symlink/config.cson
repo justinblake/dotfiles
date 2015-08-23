@@ -4,7 +4,7 @@
     fontFamily: "Menlo"
     invisibles: {}
     showInvisibles: false
-    fontSize: 12
+    fontSize: 15
   core:
     ignoredNames: [
       ".bundle"
@@ -22,12 +22,9 @@
       "background-tips"
       "exception-reporting"
       "metrics"
-      "jsformat"
       "language-javascript-better"
-      "atom-sort-sass"
       "color-tabs"
       "color-tabs-regex"
-      "terminal-status"
       "trailing-spaces"
     ]
     projectHome: "/Users/john/git"
@@ -109,9 +106,9 @@
   atomatigit: {}
   "local-history": {}
   "disable-keybindings": {}
-".js.source":
+".source.ts":
   editor:
     tabLength: 4
-".source.ts":
+".js.source":
   editor:
     tabLength: 4

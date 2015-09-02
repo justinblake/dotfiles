@@ -31,10 +31,6 @@
   'cmd-shift-v': 'clipboard-plus:toggle'
 
 
-'atom-text-editor.vim-mode.normal-mode':
-  'o': 'custom:newline-below'
-  'O': 'custom:newline-above'
-
 'atom-panel.clipboard-plus, atom-panel .project-manager, .platform-darwin .command-palette, .fuzzy-finder':
   'J': 'core:move-down'
   'K': 'core:move-up'

@@ -26,6 +26,7 @@
       "color-tabs"
       "color-tabs-regex"
       "trailing-spaces"
+      "bracket-matcher"
     ]
     projectHome: "/Users/john/git"
     audioBeep: false

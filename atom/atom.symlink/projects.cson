@@ -18,3 +18,8 @@ word:
   paths: [
     "/Users/john/dev/moki/manager/manager-dev/web"
   ]
+stuff:
+  title: "stuff"
+  paths: [
+    "/Users/john/git/me/stuff"
+  ]

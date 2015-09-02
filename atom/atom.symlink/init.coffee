@@ -20,5 +20,5 @@ maps = new Maps()
 
 
 normal = 'atom-text-editor.vim-mode.normal-mode'
-maps.reg normal, 'custom:newline-above', above
-maps.reg normal, 'custom:newline-below', below
+# maps.reg normal, 'custom:newline-above', above
+# maps.reg normal, 'custom:newline-below', below

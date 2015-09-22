@@ -1,5 +1,5 @@
 
-gff () {
+ff () {
   git add .
   git commit -a -m "feat($1): $2"
 }

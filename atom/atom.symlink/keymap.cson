@@ -1,14 +1,14 @@
-'body':
-  'cmd-h': 'unset!'
-
-'html atom-text-editor.vim-mode.normal-mode':
+'.platform-darwin atom-text-editor.vim-mode:not(.insert-mode)':
+  'cmd-p': 'clipboard-plus:toggle'
+  'shift-cmd-V': 'clipboard-plus:toggle'
   'U': 'core:redo'
   'cmd-1': 'tree-view:toggle-focus'
   'L': 'vim-mode:move-to-last-character-of-line'
-  'cmd-F': 'formatter:format-code'
+  'H': 'vim-mode:move-to-first-character-of-line'
   'cmd-shift-c': 'window:toggle-dev-tools'
-  'cmd-.': 'key-peek:toggle'
-  'cmd->': 'key-binding-resolver:toggle'
+  'cmd-[': 'last-cursor-position:previous'
+  'cmd-]': 'last-cursor-position:next'
+
 
   'cmd-k h':  'pane:split-left-creating-empty-pane'
   'cmd-k l': 'pane:split-right-creating-empty-pane'
@@ -19,42 +19,27 @@
   'cmd-k m l': 'pane:split-right-moving-current-tab'
   'cmd-k m k':    'pane:split-up-moving-current-tab'
   'cmd-k m j':  'pane:split-down-moving-current-tab'
+  'f2': 'linter:next-error'
 
-  'cmd-I': 'pane-move:down'
-  'cmd-H': 'pane-move:left'
-  'cmd-L': 'pane-move:right'
-  'cmd-K': 'pane-move:up'
+'.platform-darwin, atom-text-editor':
+  'alt-l': 'window:focus-pane-on-right'
+  'alt-h': 'window:focus-pane-on-left'
+  'alt-j': 'window:focus-pane-below'
+  'alt-k': 'window:focus-pane-above'
 
+'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
+  'f': 'jumpy:toggle'
 
-'html .platform-darwin atom-text-editor.vim-mode:not(.insert-mode)':
-  'cmd-p': 'clipboard-plus:toggle'
-  'cmd-shift-v': 'clipboard-plus:toggle'
-
+'body, .platform-darwin atom-text-editor':
+  'cmd-e': 'recent-files-fuzzy-finder:toggle-finder'
+  'cmd-n': 'tree-view:add-file'
+  'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
+  'cmd-o': 'symbols-view:toggle-project-symbols'
+  'cmd-h': 'formatter:format-code'
+  'cmd-b': 'symbols-view:go-to-declaration'
+  'cmd-shift-b': 'symbols-view:return-from-declaration'
+  'cmd-r': 'find-and-replace:show-replace'
 
 'atom-panel.clipboard-plus, atom-panel .project-manager, .platform-darwin .command-palette, .fuzzy-finder':
   'J': 'core:move-down'
   'K': 'core:move-up'
-
-'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
-    'f':    'jumpy:toggle'
-
-'html atom-workspace':
-  'cmd-n': 'tree-view:add-file'
-  'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
-
-'html .platform-darwin atom-text-editor':
-  # 'cmd-e': 'recent-files-fuzzy-finders:toggle-finder'
-  'cmd-b': 'symbols-view:go-to-declaration'
-  'cmd-shift-b': 'symbols-view:return-from-declaration'
-  'cmd-r': 'find-and-replace:show-replace'
-  'cmd-[': 'last-cursor-position:previous'
-  'cmd-]': 'last-cursor-position:next'
-
-'html .platform-darwin atom-text-editor.vim-mode:not(.insert-mode)':
-  'n': 'find-and-replace:find-next'
-
-'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
-  'cmd-k n l': 'window:focus-pane-on-right'
-  'cmd-k n h': 'window:focus-pane-on-left'
-  'cmd-k n j': 'window:focus-pane-below'
-  'cmd-k n k': 'window:focus-pane-above'

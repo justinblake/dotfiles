@@ -23,3 +23,13 @@ stuff:
   paths: [
     "/Users/john/git/me/stuff"
   ]
+"jw-modules":
+  title: "jw-modules"
+  paths: [
+    "/Users/john/git/bower/jw-modules"
+  ]
+py_watcher_common:
+  title: "py_watcher_common"
+  paths: [
+    "/usr/local/google_appengine/google/appengine/tools"
+  ]

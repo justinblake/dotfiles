@@ -61,3 +61,5 @@ unset config_files
 
 ### ohmy functions ###
 add_corrects
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

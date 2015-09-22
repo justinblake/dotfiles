@@ -106,9 +106,9 @@
   "disable-keybindings": {}
   "exception-reporting":
     userId: "ba91f39e-1537-6aa8-ca06-8feb508e989c"
-".source.ts":
+".js.source":
   editor:
     tabLength: 4
-".js.source":
+".source.ts":
   editor:
     tabLength: 4

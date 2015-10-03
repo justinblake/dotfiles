@@ -9,10 +9,7 @@ npm-debug.log
 .sass-cache/
 .bower-cache/
 .bower-registry/
-bin/
-bower_components/
-build/
 coverage/
+bower_components/
 node_modules/
-report/
 jspm_packages/

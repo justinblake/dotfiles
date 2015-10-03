@@ -1,10 +1,11 @@
 "*":
   editor:
-    showIndentGuide: false
     fontFamily: "Menlo"
     invisibles: {}
-    showInvisibles: false
+    showInvisibles: true
     fontSize: 15
+    preferredLineLength: 120
+    tabType: "soft"
   core:
     ignoredNames: [
       ".bundle"

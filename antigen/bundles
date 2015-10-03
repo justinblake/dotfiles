@@ -1,12 +1,14 @@
 
+# https://github.com/ggamel/dotfiles/issues/3
+# rm /usr/local/share/zsh/site-functions/_git may work for you.
+
 source $D/antigen/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundles <<EOBUNLDES
 
-  # adb
+  adb
   brew
-  # bower
   # encode64
   fasd
   # httpie
@@ -14,7 +16,7 @@ antigen bundles <<EOBUNLDES
   git
   github
   git-hubflow
-  # pip
+  pip
   python
   # pylint
   zsh_reload
@@ -26,7 +28,6 @@ antigen bundles <<EOBUNLDES
 
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
-  # trapd00r/zsh-syntax-highlighting-filetypes
 
 EOBUNLDES
 

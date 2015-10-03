@@ -10,3 +10,5 @@ alias followme.fast='grunt watch --module=followme --fast'
 alias bin='bower info'
 
 alias ji='jspm install'
+
+alias mja='jspm-server --no-browser src/main/webapp/client/modules/aem'

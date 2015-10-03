@@ -49,6 +49,8 @@ setopt MULTIOS
 setopt AUTO_NAME_DIRS
 setopt PUSHD_TO_HOME
 setopt RM_STAR_WAIT
+
+setopt no_list_beep
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
 # setopt complete_aliases

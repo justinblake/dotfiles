@@ -9,5 +9,7 @@ alias v.add2virtualenv='add2virtualenv'
 alias v.cdsitepackages='cdsitepackages'
 alias v.cd='cdvirtualenv'
 alias v.lssitepackages='lssitepackages'
+alias v.tmp='mktmpenv'
 
 alias py.i='pyb install_dependencies'
+alias charm='/Applications/PyCharm.app/Contents/MacOS/pycharm'

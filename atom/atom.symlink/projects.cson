@@ -33,3 +33,8 @@ py_watcher_common:
   paths: [
     "/usr/local/google_appengine/google/appengine/tools"
   ]
+"mtc-ts-app":
+  title: "mtc-ts-app"
+  paths: [
+    "/Users/john/dev/moki/manager/manager-dev/web/src/main/webapp/client/modules/app"
+  ]

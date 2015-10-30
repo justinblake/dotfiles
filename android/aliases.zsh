@@ -14,3 +14,8 @@ alias logmt='pidcat com.example.sdktest'
 alias remove44="adb shell 'su -c \"mount -o rw,remount /system;pm disable com.moki.android.kiosk;pm uninstall com.moki.android.kiosk;rm /system/priv-app/mma.apk; rm -rf /data/app/com.moki.android.kiosk* /data/app-lib/com.moki.android.kiosk /sdcard/MokiMDM;mount -o remount,ro /system    ;sync;reboot\"'"
 
 alias install44="adb shell 'su -c \"mount -o rw,remount /system;cp /sdcard/mma.apk /system/priv-app/mma.apk;chmod 0666 /system/priv-app/mma.apk;mount -o ro,remount /system;reboot\"'"
+
+alias getkey='tmpdir=$RANDOM;mkdir $tmpdir;cd $tmpdir;adb pull /system/app/KeyChain/KeyChain.apk .;unzip -o "KeyChain.apk" META-INF/\*.RSA 1>&2 >/dev/null;
+openssl pkcs7 -in META-INF/*.RSA -print_certs -inform der -text|grep -A1 Serial;cd ..;rm -rf  $tmpdir;cd'
+alias getotherkey='tmpdir=$RANDOM;mkdir $tmpdir;cd $tmpdir;adb pull /system/app/KeyChain.apk .;unzip -o "KeyChain.apk" META-INF/\*.RSA 1>&2 >/dev/null;
+openssl pkcs7 -in META-INF/*.RSA -print_certs -inform der -text|grep -A1 Serial;cd ..;rm -rf  $tmpdir;cd'

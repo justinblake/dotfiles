@@ -20,12 +20,20 @@
   'cmd-k m k':    'pane:split-up-moving-current-tab'
   'cmd-k m j':  'pane:split-down-moving-current-tab'
   'f2': 'linter:next-error'
+  'cmd-d': 'toggle-markdown-task:toggle'
+  'ctrl-d': 'toggle-markdown-task:toggle'
+
+  'f2': 'typescript:go-to-next'
+  'shift-f2': 'typescript:go-to-previous'
 
 '.platform-darwin, atom-text-editor':
   'alt-l': 'window:focus-pane-on-right'
   'alt-h': 'window:focus-pane-on-left'
   'alt-j': 'window:focus-pane-below'
   'alt-k': 'window:focus-pane-above'
+  'f2': 'typescript:go-to-next'
+  'shift-f2': 'typescript:go-to-previous'
+
 
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
   'f': 'jumpy:toggle'
@@ -37,9 +45,28 @@
   'cmd-o': 'symbols-view:toggle-project-symbols'
   'cmd-h': 'formatter:format-code'
   'cmd-b': 'symbols-view:go-to-declaration'
-  'cmd-shift-b': 'symbols-view:return-from-declaration'
   'cmd-r': 'find-and-replace:show-replace'
+  'ctrl-cmd-o': 'git-projects:toggle'
 
-'atom-panel.clipboard-plus, atom-panel .project-manager, .platform-darwin .command-palette, .fuzzy-finder':
+'atom-panel .select-list, atom-panel.clipboard-plus, atom-panel .git-projects, atom-panel .project-manager, .platform-darwin .command-palette, .fuzzy-finder':
   'J': 'core:move-down'
   'K': 'core:move-up'
+
+'atom-workspace atom-text-editor:not([mini])[data-grammar~=ts]':
+  'cmd-h': 'typescript:format-code'
+  'cmd-;': 'typescript:context-actions'
+  'f6': 'typescript:rename-refactor'
+  'cmd-S': 'typescript:find-references'
+  'alt-enter': 'typescript:quick-fix'
+  'cmd-M': 'typescript:output-toggle'
+  'f8': 'typescript:toggle-breakpoint'
+
+# Stronger bindings
+'atom-workspace':
+  'cmd-B': 'typescript:build'
+  'cmd-\'': 'typescript:sync'
+
+# Quick navigations
+'.platform-win32, .platform-linux, .platform-darwin':
+  'f2': 'typescript:go-to-next'
+  'shift-f2': 'typescript:go-to-previous'

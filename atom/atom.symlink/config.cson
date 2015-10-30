@@ -2,10 +2,12 @@
   editor:
     fontFamily: "Menlo"
     invisibles: {}
-    showInvisibles: true
-    fontSize: 15
     preferredLineLength: 120
+    tabLength: 1
+    fontSize: 15
     tabType: "soft"
+    useShadowDOM: false
+    autoIndent: false
   core:
     ignoredNames: [
       ".bundle"
@@ -28,10 +30,6 @@
     projectHome: "/Users/john/git"
     audioBeep: false
     destroyEmptyPanes: false
-    themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
-    ]
     openEmptyEditorOnStart: false
   "spell-check":
     grammars: [
@@ -107,9 +105,26 @@
   "disable-keybindings": {}
   "exception-reporting":
     userId: "ba91f39e-1537-6aa8-ca06-8feb508e989c"
+  "gist-it":
+    userToken: "9fab33fcc021d8153f13689fc07c08cf094a0b7f"
+    newGistsDefaultToPrivate: true
+  "markdown-preview": {}
+  "git-projects":
+    rootPath: "~/git"
+    sortBy: "Latest modification date"
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
 ".js.source":
   editor:
     tabLength: 4
 ".source.ts":
   editor:
     tabLength: 4
+    preferredLineLength: 120
+".ini.source":
+  editor:
+    preferredLineLength: 140
+    autoIndent: true
+    showInvisibles: false
+    showIndentGuide: false

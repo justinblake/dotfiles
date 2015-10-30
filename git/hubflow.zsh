@@ -13,3 +13,5 @@ alias release='git hf release'
 alias hotfix='git hf hotfix'
 
 alias support='git hf support'
+
+alias build='git hf build'

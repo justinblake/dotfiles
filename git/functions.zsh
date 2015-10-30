@@ -1,4 +1,14 @@
 
+h_reset () {
+  git checkout master
+  git delete-tag $1
+  git reset --hard $2
+  git push --force
+  git checkout develop
+  git reset --hard $2
+  git push --force
+}
+
 # ff () {
 #   if [[ ! "$1"]] ; then
 #     return

@@ -21,5 +21,7 @@ alias groot='cd $(git rev-parse --show-cdup)'
 alias gcd='git checkout develop'
 alias gmd='git merge develop'
 alias root='cd $(git rev-parse --git-dir)/..'
+alias greset='git reset --hard HEAD~1'
+alias g.del-b='git delete-branch'
 
 alias a.what='alias | grep '

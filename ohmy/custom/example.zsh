@@ -1,7 +1,7 @@
 master=$DEV/moki/manager/manager-master/web
 uat=$DEV/moki/manager/manager-uat/web
 stage=$DEV/moki/manager/manager-stage/web
-dev=$DEV/moki/manager/manager-dev/web
+dev=$DEV/moki/manager/moki-web-dev/web
 merge=$DEV/moki/manager/manager-merge/web
 
 macdev=$HOME/dev/devmac

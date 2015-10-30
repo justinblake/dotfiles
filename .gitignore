@@ -7,4 +7,6 @@
 **/atom.symlink/.apm/
 **/atom.symlink/local-history/
 
+.idea/
 git/gitconfig.symlink
+*.DS_Store

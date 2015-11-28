@@ -1,3 +1,4 @@
+
 mma_install () {
 	adb push $2 /sdcard/mma.apk
 	echo "Pushed $2"
@@ -44,4 +45,26 @@ agent_rm() {
 	if [[ $1 ]]; then
 		adb shell "reboot"
 	fi
+}
+
+
+mm_get_key() {
+  key=/system/app/KeyChain/KeyChain.apk
+  if [[ $1 == "other" ]]; then
+    key=/system/app/KeyChain.apk
+  fi
+  echo "key: $key"
+  tmpdir=$RANDOM
+  mkdir $tmpdir
+  cd $tmpdir
+  if [[ -z $2 ]]; then
+    adb pull $key .
+  else
+    adb -s $2 pull $key .
+  fi
+  unzip -o "KeyChain.apk" META-INF/\*.RSA 1>&2 >/dev/null
+  openssl pkcs7 -in META-INF/*.RSA -print_certs -inform der -text|grep -A1 Serial
+  cd ..
+  rm -rf $tmpdir
+  cd
 }

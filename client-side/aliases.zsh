@@ -19,3 +19,4 @@ alias mb.depcache='jspm depcache app/main.ts - app/vendor.ts - cached/all.js'
 
 
 alias cc='coffee-to-typescript -cma'
+alias wa='grunt watch'

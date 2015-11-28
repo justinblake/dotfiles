@@ -7,7 +7,6 @@
     fontSize: 15
     tabType: "soft"
     useShadowDOM: false
-    autoIndent: false
   core:
     ignoredNames: [
       ".bundle"
@@ -115,6 +114,12 @@
 ".source.ts.tsx":
   editor:
     preferredLineLength: 120
+".ini.source":
+  editor:
+    preferredLineLength: 140
+    autoIndent: true
+    showInvisibles: false
+    showIndentGuide: false
 ".js.source":
   editor:
     tabLength: 4
@@ -122,9 +127,6 @@
   editor:
     tabLength: 4
     preferredLineLength: 120
-".ini.source":
+".source.tsx":
   editor:
-    preferredLineLength: 140
-    autoIndent: true
-    showInvisibles: false
-    showIndentGuide: false
+    preferredLineLength: 120

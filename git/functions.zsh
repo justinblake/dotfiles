@@ -11,8 +11,7 @@ h_reset () {
 
 skip () {
   local message=${1:-ci}
-  git commit -n -a -m "chore(skip): $message"
-  git push --no-verify
+  git commit -a -m "chore(skip): $message"
 }
 
 gq () {

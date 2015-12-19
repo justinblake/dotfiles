@@ -32,8 +32,13 @@ mma_rm () {
 }
 
 agent_install() {
-	adb install $1
+	adb install $1 -r
 }
+
+a_i() {
+	adb -s $1 install -r $2
+}
+
 
 agent_rm() {
 	#  /data/app/com.moki.samsungagent-1.apk

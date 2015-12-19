@@ -9,7 +9,7 @@ syntax on
 filetype indent plugin on
 "set timeoutlen=200
 
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set clipboard=unnamedplus
 set number
 
@@ -174,8 +174,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -195,3 +195,5 @@ vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 inoremap jj <Esc>
+
+"nnoremap <c-n> :%s///g<left><left>

@@ -12,11 +12,14 @@ nnoremap <Space>vs :source ~/.ideavimrc<CR>
 " IDE actions
 " ============================================================================
 
-nnoremap / :action Find<CR>
-nnoremap n :action FindNext<CR>
-nnoremap N :action FindPrevious<CR>
-nnoremap U :action $Redo<CR>
-nnoremap f :action AceJumpAction<CR>
+"nnoremap / :action Find<CR>
+"nnoremap n :action FindNext<CR>
+"nnoremap N :action FindPrevious<CR>
+"nnoremap U :action $Redo<CR>
+"nnoremap f :action AceJumpAction<CR>
 
+nnoremap <leader>k :action VimWindowSplitVertical<CR>
+nnoremap * *<c-o>
 
+nnoremap <a-r> :%s//
 

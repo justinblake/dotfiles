@@ -1,3 +1,6 @@
+deb () {
+    DEBUG=${1:-"*"} npm run ${2}
+}
 
 jin () {
 	package=$1
@@ -17,6 +20,10 @@ jib () {
 ti () {
 	package=$1
 	tsd install $package -ros
+}
+
+unj () {
+  jspm uninstall $1
 }
 
 reset_web () {

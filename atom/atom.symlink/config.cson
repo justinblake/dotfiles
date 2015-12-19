@@ -114,19 +114,19 @@
 ".source.ts.tsx":
   editor:
     preferredLineLength: 120
+".source.tsx":
+  editor:
+    preferredLineLength: 120
+".source.ts":
+  editor:
+    tabLength: 4
+    preferredLineLength: 120
+".js.source":
+  editor:
+    tabLength: 4
 ".ini.source":
   editor:
     preferredLineLength: 140
     autoIndent: true
     showInvisibles: false
     showIndentGuide: false
-".js.source":
-  editor:
-    tabLength: 4
-".source.ts":
-  editor:
-    tabLength: 4
-    preferredLineLength: 120
-".source.tsx":
-  editor:
-    preferredLineLength: 120

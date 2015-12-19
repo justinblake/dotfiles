@@ -19,7 +19,7 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 setopt NO_BG_NICE # don't nice background tasks
-setopt NO_HUP
+setopt NO_HUP # don’t send HUP signal to background jobs when exiting ZSH
 setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
@@ -27,8 +27,8 @@ setopt HIST_VERIFY
 setopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
-setopt CORRECT
-setopt COMPLETE_IN_WORD
+unsetopt CORRECT
+unsetopt correctall
 setopt IGNORE_EOF
 
 
@@ -49,9 +49,11 @@ setopt MULTIOS
 setopt AUTO_NAME_DIRS
 setopt PUSHD_TO_HOME
 setopt RM_STAR_WAIT
-# don't expand aliases _before_ completion has finished
-#   like: git comm-[tab]
-# setopt complete_aliases
+
+setopt extendedglob
+setopt extended_glob
+#setopt dotglob
+setopt glob_complete
 
 zle -N newtab
 

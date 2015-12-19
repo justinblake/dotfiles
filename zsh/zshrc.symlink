@@ -1,6 +1,9 @@
-
 # shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
+
+# Ruby shit
+# export PATH="$PATH:$HOME/.rvm/bin"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
@@ -15,7 +18,6 @@ then
   source ~/.localrc
 fi
 
-
 # all of our zsh files
 typeset -U config_files
 config_files=($D/**/*.zsh)
@@ -29,8 +31,7 @@ done
 # ============================================================================
 # Start Antigen plugin management
 # ============================================================================
-
-if [[ $debug != "true" ]] then
+if [[ $debug ]] ; then
   source $D/antigen/bundles
 fi
 
@@ -58,6 +59,11 @@ do
 done
 
 unset config_files
+source ~/.bashrc
 
 ### ohmy functions ###
 add_corrects
+
+# added by travis gem
+[ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
+. ~/npm-comp.sh

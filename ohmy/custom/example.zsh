@@ -1,13 +1,12 @@
-export fuck=/Users/john
-master=$DEV/moki/manager/manager-master/web/src/main/webapp/client/modules/aem
-uat=$DEV/moki/manager/manager-uat/web/src/main/webapp/client/modules/aem
-stage=$DEV/moki/manager/manager-stage/web/src/main/webapp/client/modules/aem
-dev_aem=$DEV/moki/manager/manager-dev/web/src/main/webapp/client/modules/aem
-merge=$DEV/moki/manager/manager-merge/web/src/main/webapp/client/modules/aem
+master=$DEV/moki/manager/manager-master/web
+uat=$DEV/moki/manager/manager-uat/web
+stage=$DEV/moki/manager/manager-stage/web
+dev=$DEV/moki/manager/moki-web-dev/web
+merge=$DEV/moki/manager/manager-merge/web
 
 macdev=$HOME/dev/devmac
-dev=$DEV
+tig=$HOME/git
 
-p_gang=$DEV/py_dev/gangular
-w_ts=$DEV/webstorm/ts-ng-boilerplate
-w_gulp_starter=$DEV/webstorm/gulp-starter
+testing=~tig/js/test-apps
+
+bmoki=/Users/john/git/js/test-apps/moki-brunch

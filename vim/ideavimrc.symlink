@@ -11,16 +11,15 @@ nnoremap <Space>vs :source ~/.ideavimrc<CR>
 " ============================================================================
 " IDE actions
 " ============================================================================
-"""
 
 "nnoremap / :action Find<CR>
 "nnoremap n :action FindNext<CR>
 "nnoremap N :action FindPrevious<CR>
 "nnoremap U :action $Redo<CR>
-"nnoremap ; :action AceJumpAction<CR>
-nnoremap <Space>o :action GotoClass<CR>
-nnoremap <Space>O :action GotoFile<CR>
-nnoremap <Space>d :action CloseContent<CR>
-nnoremap <Space>j :action RecentFiles<CR>
-nnoremap <Space>k :action FileStructurePopup<CR>
-nnoremap <Space>h :action QuickJavaDoc<CR>
+"nnoremap f :action AceJumpAction<CR>
+
+nnoremap <leader>k :action VimWindowSplitVertical<CR>
+nnoremap * *<c-o>
+
+nnoremap <a-r> :%s//
+

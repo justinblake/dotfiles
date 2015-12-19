@@ -1,0 +1,19 @@
+'.source.ts':
+  'import from':
+    'prefix': 'im'
+    'body': "import $1 from '$2'$3"
+
+  'fat arrow':
+    'prefix': 'fat'
+    'body': '() => {$1}'
+
+
+
+'.source.js':
+  'import from':
+    'prefix': 'im'
+    'body': "import $1 from '$2'$3"
+
+  'fat arrow':
+    'prefix': 'fat'
+    'body': '() => {$1}'

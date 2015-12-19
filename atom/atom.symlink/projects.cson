@@ -1,0 +1,40 @@
+".dotfiles":
+  title: ".dotfiles"
+  paths: [
+    "/Users/john/.dotfiles"
+  ]
+word:
+  title: "word"
+  paths: [
+    "/Users/john/git/atom/packages/word"
+  ]
+"vim-mode":
+  title: "vim-mode"
+  paths: [
+    "/Users/john/git/testing/vim-mode"
+  ]
+"moki-dev":
+  title: "moki-dev"
+  paths: [
+    "/Users/john/dev/moki/manager/manager-dev/web"
+  ]
+stuff:
+  title: "stuff"
+  paths: [
+    "/Users/john/git/me/stuff"
+  ]
+"jw-modules":
+  title: "jw-modules"
+  paths: [
+    "/Users/john/git/bower/jw-modules"
+  ]
+py_watcher_common:
+  title: "py_watcher_common"
+  paths: [
+    "/usr/local/google_appengine/google/appengine/tools"
+  ]
+"mtc-ts-app":
+  title: "mtc-ts-app"
+  paths: [
+    "/Users/john/dev/moki/manager/manager-dev/web/src/main/webapp/client/modules/app"
+  ]

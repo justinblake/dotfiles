@@ -1,4 +1,0 @@
-DISABLE_LS_COLORS="true"
-ENABLE_CORRECTION="true"
-HIST_STAMPS="dd.mm.yyyy"
-ZSH_THEME=""

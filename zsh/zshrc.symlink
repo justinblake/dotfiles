@@ -1,12 +1,13 @@
 # shortcut to this dotfiles path is $D
 export D=$HOME/.dotfiles
-
-# Ruby shit
-# export PATH="$PATH:$HOME/.rvm/bin"
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+export ZSH=$D/oh-my-zsh
+ZSH_CUSTOM=~/.dotfiles/ohmy-custom
+DISABLE_LS_COLORS="true"
+ENABLE_CORRECTION="true"
+HIST_STAMPS="dd.mm.yyyy"
+ZSH_THEME=""
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/dev
+export PROJECTS=~/git
 
 local debug="false"
 
@@ -18,9 +19,11 @@ then
   source ~/.localrc
 fi
 
+setopt extendedglob
+
 # all of our zsh files
 typeset -U config_files
-config_files=($D/**/*.zsh)
+config_files=($D/^(oh-my-zsh|ohmy-custom)*/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -29,16 +32,40 @@ do
 done
 
 # ============================================================================
-# Start Antigen plugin management
+# Start plugins
 # ============================================================================
+plugins=(
+  adb
+  brew
+  # encode64
+  fasd
+  # httpie
+  history
+  git
+  github
+  git-hubflow
+  pip
+  python
+  # pylint
+  zsh_reload
+  # systemadmin
+  web-search
+  # wd
+  vi-mode
+  virtualenvwrapper
+  zsh-syntax-highlighting
+  history-substring-search
+  zsh-completions
+)
+
 if [[ $debug ]] ; then
-  source $D/antigen/bundles
+  source $ZSH/oh-my-zsh.sh
 fi
 
 unset debug
 
 # ============================================================================
-# End of Antigen plugin management
+# End plugins
 # ============================================================================
 
 # load everything but the path and completion files
@@ -62,7 +89,7 @@ unset config_files
 source ~/.bashrc
 
 ### ohmy functions ###
-add_corrects
+#add_corrects
 
 # added by travis gem
 [ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh

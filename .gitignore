@@ -1,12 +1,9 @@
-**/atom.symlink/.node-gyp/
-**/atom.symlink/.storage/
-**/atom.symlink/compile-cache/
-**/atom.symlink/packages/
-**/atom.symlink/storage/
-**/atom.symlink/themes/
-**/atom.symlink/.apm/
-**/atom.symlink/local-history/
+*.DS_Store
 
 .idea/
+
+atom/atom.symlink/
+!atom/atom.symlink/*.coffee
+!atom/atom.symlink/*.cson
+!atom/atom.symlink/*.less
 git/gitconfig.symlink
-*.DS_Store

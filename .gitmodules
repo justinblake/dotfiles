@@ -1,0 +1,9 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "ohmy-custom/plugins/zsh-completions"]
+	path = ohmy-custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "ohmy-custom/plugins/zsh-syntax-highlighting"]
+	path = ohmy-custom/plugins/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

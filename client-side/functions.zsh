@@ -19,7 +19,8 @@ jib () {
 
 ti () {
 	package=$1
-	tsd install $package -ros
+  t_flag=${2:-"A"}
+	typings install -$t_flag $package -S
 }
 
 unj () {

@@ -1,7 +1,7 @@
 alias zshrc='vim ~/.zshrc' # Quick access to the ~/.zshrc file
 alias zshconfig="vim ~/.zshrc"
 alias mydots="atom $D"
-alias engine="vim /usr/local/etc/nginx/nginx.conf"
+alias engine="atom /usr/local/etc/nginx/nginx.conf"
 alias launch="vim /etc/launchd.conf"
 
 # ls, the common ones I use a lot shortened for rapid fire usage

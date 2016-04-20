@@ -86,11 +86,6 @@ do
 done
 
 unset config_files
-source ~/.bashrc
 
 ### ohmy functions ###
 #add_corrects
-
-# added by travis gem
-[ -f /Users/john/.travis/travis.sh ] && source /Users/john/.travis/travis.sh
-. ~/npm-comp.sh

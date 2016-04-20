@@ -1,8 +1,0 @@
--Dappengine.generated.dir=${MOKI_DIR}/db
--XX:MaxPermSize=512m
--XX:PermSize=128m
--Xms1024m
--Xmx1024m
--XX:-UseGCOverheadLimit
--Dcom.google.appengine.devappserver_module.backend.port=8084
--Dcom.google.appengine.devappserver_module.remotecontrol.port=8088

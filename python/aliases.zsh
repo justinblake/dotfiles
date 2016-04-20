@@ -12,3 +12,4 @@ alias v.lssitepackages='lssitepackages'
 alias v.tmp='mktmpenv'
 
 alias py.i='pyb install_dependencies'
+alias pi='pip install'

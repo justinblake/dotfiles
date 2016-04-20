@@ -1,9 +1,7 @@
+#!/usr/bin/env bash
 
-export PATH="/Users/john/Library/Android/sdk/platform-tools:$PATH"
+export PATH=${PATH}:/Users/justin/Library/Android/sdk/platform-tools:/Users/justin/Library/Android/sdk/tools:/Users/justin/Library/Android/sdk/ndk-bundle
 
+export PATH=${PATH}:/usr/local/Cellar/ant/1.9.6/bin
 
-export goose="06f33c43"
-export thr="015d41d465201009"
-export two="05a8e88b"
-export one="00e45cfe"
-export swhite="3004a3e468669100"
+export ANDROID_HOME=/Users/justin/Library/Android/sdk
